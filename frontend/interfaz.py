@@ -5,18 +5,18 @@ class SistemaClientes:
 
     def __init__(self):
 
-        # ==========================
-        # Ventana Principal
-        # ==========================
+        
+        # la ventana Principal
+      
 
         self.ventana = tk.Tk()
         self.ventana.title("Sistema de Gestión de Clientes")
         self.ventana.geometry("1100x650")
         self.ventana.resizable(False, False)
 
-        # ==========================
-        # Colores
-        # ==========================
+        
+        # los colores
+        
 
         self.color_menu = "#4338CA"
         self.color_fondo = "#F8F9FC"
@@ -25,17 +25,17 @@ class SistemaClientes:
 
         self.ventana.configure(bg=self.color_fondo)
 
-        # ==========================
-        # Construcción de la interfaz
-        # ==========================
+        
+        # Construcción ya de la interfaz
+        
 
         self.crear_menu()
         self.crear_contenido()
         self.mostrar_inicio()
 
-    # =====================================
-    # MENÚ LATERAL
-    # =====================================
+    
+    # el menu lateral
+    
 
     def crear_menu(self):
 
@@ -77,9 +77,9 @@ class SistemaClientes:
         self.crear_boton("🗑 Eliminar", self.mostrar_eliminar)
         self.crear_boton("🚪 Salir", self.ventana.destroy)
 
-    # =====================================
-    # BOTONES
-    # =====================================
+    
+    # Botones
+    
 
     def crear_boton(self, texto, comando):
 
@@ -100,9 +100,9 @@ class SistemaClientes:
 
         boton.pack(pady=5)
 
-    # =====================================
-    # PANEL DERECHO
-    # =====================================
+    
+    # el panel del lado derecho
+    
 
     def crear_contenido(self):
 
@@ -117,19 +117,18 @@ class SistemaClientes:
             fill="both"
         )
 
-    # =====================================
-    # LIMPIAR CONTENIDO
-    # =====================================
+    
+    # limpia el contenido basicamente
+    
 
     def limpiar_contenido(self):
 
         for widget in self.contenido.winfo_children():
             widget.destroy()
 
-    # =====================================
-    # PANTALLA DE INICIO
-    # =====================================
-
+    
+    # Pantalla de inicio
+   
     def mostrar_inicio(self):
 
         self.limpiar_contenido()
@@ -164,9 +163,9 @@ class SistemaClientes:
 
         descripcion.pack(pady=20)
 
-    # =====================================
-    # PANTALLAS (AÚN VACÍAS)
-    # =====================================
+    
+    # Pantallas vacias por el momento
+    
 
     def mostrar_registro(self):
 
@@ -188,9 +187,9 @@ class SistemaClientes:
 
         self.limpiar_contenido()
 
-    # =====================================
-    # EJECUTAR
-    # =====================================
+    
+    # Ejecutar
+    
 
     def ejecutar(self):
 
